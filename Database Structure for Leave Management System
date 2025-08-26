@@ -1,0 +1,37 @@
+-- Database Structure for Leave Management System
+
+-- Table: users
+CREATE TABLE `users` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(100) DEFAULT NULL,
+  `email` VARCHAR(100) UNIQUE,
+  `password` VARCHAR(255) DEFAULT NULL,
+  `role` ENUM('student','teacher') NOT NULL,
+  `year` ENUM('I','II','III','IV') DEFAULT NULL,
+  `phone` VARCHAR(10) DEFAULT NULL,
+  `age` INT(2) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Sample Users (remove in production, optional for testing)
+INSERT INTO `users` (`name`, `email`, `password`, `role`, `year`, `phone`, `age`) VALUES
+('Test Student', 'student@example.com', 'hashed_password', 'student', 'II', '9876543210', 18),
+('Test Teacher', 'teacher@example.com', 'hashed_password', 'teacher', NULL, NULL, NULL);
+
+-- Table: leave_requests
+CREATE TABLE `leave_requests` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `student_id` INT(11) DEFAULT NULL,
+  `start_date` DATE DEFAULT NULL,
+  `end_date` DATE DEFAULT NULL,
+  `start_time` TIME DEFAULT NULL,
+  `end_time` TIME DEFAULT NULL,
+  `reason` TEXT DEFAULT NULL,
+  `status` ENUM('Pending','Approved','Declined') DEFAULT 'Pending',
+  PRIMARY KEY (`id`),
+  FOREIGN KEY (`student_id`) REFERENCES `users`(`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Sample Leave Requests (remove in production, optional for testing)
+INSERT INTO `leave_requests` (`student_id`, `start_date`, `end_date`, `start_time`, `end_time`, `reason`, `status`) VALUES
+(1, '2025-08-20', '2025-08-22', '09:00:00', '17:00:00', 'Medical Leave', 'Approved');
