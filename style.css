@@ -1,0 +1,236 @@
+/* General Page Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: #eef2f7;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Container Wrapper */
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* Card Style (Form + Sections) */
+.card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #3498db;
+    padding: 12px 20px;
+    color: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.navbar h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.nav-right a.logout-btn {
+    background: #e74c3c;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-right a.logout-btn:hover {
+    background: #c0392b;
+}
+
+
+/* Headings */
+h2, h3 {
+    text-align: center;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+
+
+/* Remove borders - flat input */
+
+
+/* Flat button */
+.form-container button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: #007BFF;
+    color: white;
+    border: none;    /* ✅ No border */
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-container button:hover {
+    background: #0056b3;
+}
+
+/* Links neatly aligned */
+.extra-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.link-btn {
+    font-size: 14px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.link-btn:hover {
+    text-decoration: underline;
+}
+
+/* Error message */
+.error {
+    color: red;
+    margin-top: 12px;
+}
+
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 18px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+    display: block;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 6px rgba(52, 152, 219, 0.4);
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #3498db;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: 500;
+}
+a:hover {
+    text-decoration: underline;
+}
+/* Back / Create Account Button */
+.back-btn {
+    display: inline-block;
+    margin-top: 10px;
+    background: #2ecc71;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.nav-right span {
+    margin-right: 15px;
+    font-weight: 500;
+}
+
+.back-btn:hover {
+    background: #27ae60;
+}
+
+
+/* Messages */
+.error {
+    color: #e74c3c;
+    font-size: 14px;
+    text-align: center;
+}
+.success {
+    color: #27ae60;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Table Styling */
+.table-container {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+th, td {
+    padding: 14px 18px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+    font-size: 14px;
+}
+
+th {
+    background: #3498db;
+    color: white;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+tr:hover {
+    background: #f9fcff;
+}
+
+/* Status Badges */
+td.status-pending {
+    color: #f39c12;
+    font-weight: bold;
+}
+
+td.status-approved {
+    color: #27ae60;
+    font-weight: bold;
+}
+
+td.status-declined {
+    color: #e74c3c;
+    font-weight: bold;
+}
